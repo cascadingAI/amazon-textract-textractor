@@ -40,11 +40,11 @@ class TestCommand(setuptools.Command):
 
 setup(
     # include data files
-    name="amazon-textract-textractor",
-    version="1.7.9",
+    name="amazon-textract-textractor-casca",
+    version="1.7.9.1",
     license="Apache 2.0",
     description="A package to use AWS Textract services.",
-    url="https://github.com/aws-samples/amazon-textract-textractor",
+    url="https://github.com/cascadingAI/amazon-textract-textractor",
     long_description=long_description,
     long_description_content_type="text/markdown",
     classifiers=[

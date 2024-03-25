@@ -117,6 +117,8 @@ def linearize_children(
                 ),
             )
         )
+        new_lines[-1].page = line.page
+
     elements = [e for e in elements if not isinstance(e, Word)] + new_lines
     grouped_elements = group_elements_horizontally(
         elements, config.heuristic_overlap_ratio
