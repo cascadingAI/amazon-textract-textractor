@@ -70,7 +70,11 @@ class Line(DocumentEntity):
         for w in self.words:
             w.line_id = self.id
             w.line_bbox = self.bbox
-        return self.text, self.words
+        
+        if config.with_coords:
+            return config.with_coords(self), self.words
+        else:
+            return self.text, self.words
 
     @property
     def page(self):

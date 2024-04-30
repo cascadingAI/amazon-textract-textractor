@@ -148,7 +148,10 @@ class Word(DocumentEntity):
     def get_text_and_words(
         self, config: TextLinearizationConfig = TextLinearizationConfig()
     ):
-        return self.text, [self]
+        if config.with_coords:
+            return config.with_coords(self), [self]
+        else:
+            return self.text, [self]
 
     def __repr__(self) -> str:
         """

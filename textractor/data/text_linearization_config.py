@@ -153,3 +153,5 @@ class TextLinearizationConfig:
     add_prefixes_and_suffixes_as_words: bool = False #: Controls if the prefixes/suffixes will be inserted in the words returned by `get_text_and_words`
 
     add_prefixes_and_suffixes_in_text: bool = True #: Controls if the prefixes/suffixes will be added to the linearized text
+
+    with_coords = None #: Function to add coordinates to the linearized text
